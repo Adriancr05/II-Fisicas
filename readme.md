@@ -15,7 +15,6 @@ Experimentos con distintas configuraciones de los componentes **Rigidbody** y **
 - [Situación 7](#situación-7)
 - [Situación 8](#situación-8)
 - [Situación 9](#situación-9)
-- [Conclusiones](#conclusiones)
 
 ## Situación 1
 
@@ -162,4 +161,4 @@ Explicación: el plano cinemático actúa como suelo fijo, así que ahora sí ha
 
 **Explicación:** la esfera es física, así que la gravedad la acelera. Pero al ser Trigger no genera colisión sólida: pasa a través del cubo y del plano sin empujarlos ni rebotar. Lo único que sucede son los **eventos de trigger**: se llama a `OnTriggerEnter` al entrar en el cubo y en el plano, `OnTriggerStay` mientras los atraviesa y `OnTriggerExit` al salir.
 
-![](gifs/situacion9.gif)`
+![](gifs/situacion9.gif)

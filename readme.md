@@ -4,7 +4,7 @@
 **Universidad:** Universidad de La Laguna  
 **Titulación:** Grado en Ingeniería Informática  
 **Curso:** 2026/2027  
-**Fecha:** 15 de octubre de 2026
+**Fecha:** 16 de octubre de 2026
 
 Repositorio con los experimentos y scripts desarrollados para la práctica de físicas 3D en Unity. La primera parte recoge los experimentos con distintas configuraciones de los componentes **Rigidbody** y **Collider**, explicando los resultados según lo visto en clase. La segunda parte recoge los ejercicios con scripts, cada uno con una descripción de lo implementado, los hitos relevantes y una prueba de ejecución en GIF.
 
@@ -16,19 +16,29 @@ Repositorio con los experimentos y scripts desarrollados para la práctica de f�
 │   ├── Ejercicios Introducción a Físicas.pdf
 │   └── Introducción a Físicas 3D.pdf
 ├── gifs
-│   ├── situacion1.gif
-│   ├── ...
-│   ├── situacion9.gif
+│   ├── situacion_1.gif
+│   ├── situacion_2.gif
+│   ├── situacion_3.gif
+│   ├── situacion_4.gif
+│   ├── situacion_5.gif
+│   ├── situacion_6.gif
+│   ├── situacion_7.gif
+│   ├── situacion_8.gif
+│   ├── situacion_9.gif
 │   ├── ejercicio_1.gif
-│   ├── ...
+│   ├── ejercicio_2.gif
+│   ├── ejercicio_3.gif
+│   ├── ejercicio_4.gif
+│   ├── ejercicio_5.gif
 │   └── ejercicio_6.gif
-├── readme.md
-└── scripts
-    ├── CollisionColor.cs
-    ├── PlayerController.cs
-    ├── SphereMover.cs
-    ├── ThrowBall.cs
-    └── TriggerZones.cs
+├── scripts
+│   ├── CollisionColor.cs
+│   ├── PlayerController.cs
+│   ├── SphereMover.cs
+│   ├── ThrowBall.cs
+│   └── TriggerZones.cs
+└── readme.md
+
 ```
 
 ## Índice
@@ -47,14 +57,12 @@ Repositorio con los experimentos y scripts desarrollados para la práctica de f�
 
 **Parte 2: Scripts de físicas**
 
-1. [Ejercicio 1: Personaje controlado con Rigidbody](#ejercicio-1)
-2. [Ejercicio 2: Nombre y color al colisionar](#ejercicio-2)
-3. [Ejercicio 3: Zonas con Trigger](#ejercicio-3)
-4. [Ejercicio 4: Capas y Layer Collision Matrix](#ejercicio-4)
-5. [Ejercicio 5: Physic Materials y AddForce](#ejercicio-5)
-6. [Ejercicio 6: La esfera alcanza al cilindro](#ejercicio-6)
-
----
+- [Ejercicio 1: Personaje controlado con Rigidbody](#ejercicio-1)
+- [Ejercicio 2: Nombre y color al colisionar](#ejercicio-2)
+- [Ejercicio 3: Zonas con Trigger](#ejercicio-3)
+- [Ejercicio 4: Capas y Layer Collision Matrix](#ejercicio-4)
+- [Ejercicio 5: Physic Materials y AddForce](#ejercicio-5)
+- [Ejercicio 6: La esfera alcanza al cilindro](#ejercicio-6)
 
 # Parte 1: Experimentos con Rigidbody y Collider
 

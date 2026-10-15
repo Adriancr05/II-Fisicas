@@ -1,7 +1,5 @@
 # Práctica 3 - Físicas
 
-# Ejercicio Físicas 3D – Rigidbody y Collider en Unity
-
 Experimentos con distintas configuraciones de los componentes **Rigidbody** y **Collider** en Unity, explicando los resultados según lo visto en clase.
 
 ## Índice

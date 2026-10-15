@@ -212,8 +212,6 @@ Repositorio con los experimentos y scripts desarrollados para la práctica de f�
 
 ![](gifs/situacion_9.gif)
 
----
-
 # Parte 2: Scripts de físicas
 
 <a id="ejercicio-1"></a>

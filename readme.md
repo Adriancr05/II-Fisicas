@@ -127,7 +127,7 @@ Resultado: el plano se queda fijo. La esfera cae, golpea el borde del cubo y aca
 
 Explicación: el plano cinemático actúa como suelo fijo, así que ahora sí hay contacto entre esfera, cubo y plano, y la fricción tiene efecto. La fricción es la fuerza de rozamiento entre las superficies en contacto.
 
-![](gifs/situacion7.gif)`
+![](gifs/situacion7.gif)
 
 ---
 
@@ -137,17 +137,16 @@ Explicación: el plano cinemático actúa como suelo fijo, así que ahora sí ha
 
 | Objeto | Componentes |
 |--------|-------------|
-| Plano | Collider + **Rigidbody** con **Is Kinematic ✔** |
+| Plano | Collider + **Rigidbody** + **Is Kinematic** |
 | Cubo | Collider + **Rigidbody** |
-| Esfera | Collider con **Is Trigger ✔** + **Rigidbody** con **Is Kinematic ✔** (no física) |
+| Esfera | Collider + **Is Trigger** + **Rigidbody** + **Is Kinematic** (no física) |
 
 **Resultado:** no se mueve nada. El cubo sigue sobre el plano y la esfera flota.
 
 **Explicación:** consideramos "no física" a la esfera como cinemática, por lo que no le afecta la gravedad. Además, al ser Trigger, su collider **no es sólido**: cualquier objeto que se mueva hacia ella la atravesaría sin rebotar, y lo único que ocurriría es que se dispararían los eventos `OnTriggerEnter`, `OnTriggerStay` y `OnTriggerExit`. Se cumple la condición para que se lancen eventos de trigger (al menos uno de los objetos tiene Rigidbody).
 
-> 📸 `![Situación 8](media/situacion8.gif)`
+![](gifs/situacion8.gif)
 
----
 
 ## Situación 9
 
@@ -155,25 +154,12 @@ Explicación: el plano cinemático actúa como suelo fijo, así que ahora sí ha
 
 | Objeto | Componentes |
 |--------|-------------|
-| Plano | Collider + **Rigidbody** con **Is Kinematic ✔** |
+| Plano | Collider + **Rigidbody** + **Is Kinematic** |
 | Cubo | Collider + **Rigidbody** |
-| Esfera | Collider con **Is Trigger ✔** + **Rigidbody** (no cinemático, con gravedad) |
+| Esfera | Collider + **Is Trigger** + **Rigidbody** |
 
 **Resultado:** la esfera cae, atraviesa el cubo y el plano sin ser frenada y sigue cayendo indefinidamente. El cubo no se mueve.
 
 **Explicación:** la esfera es física, así que la gravedad la acelera. Pero al ser Trigger no genera colisión sólida: pasa a través del cubo y del plano sin empujarlos ni rebotar. Lo único que sucede son los **eventos de trigger**: se llama a `OnTriggerEnter` al entrar en el cubo y en el plano, `OnTriggerStay` mientras los atraviesa y `OnTriggerExit` al salir.
 
-> 📸 `![Situación 9](media/situacion9.gif)`
-
----
-
-## Conclusiones
-
-1. **Sin Rigidbody** un objeto es estático: bloquea a los demás pero no se ve afectado por la física.
-2. **Con Rigidbody** el objeto responde a la gravedad y a las fuerzas; **con Is Kinematic**, solo se mueve por script o animación, pero sigue siendo sólido y empuja a los dinámicos.
-3. Un **suelo** que deba permanecer fijo debe ser estático o cinemático, **nunca** un Rigidbody dinámico (se cae con todo lo demás).
-4. La **masa** no afecta a la velocidad de caída, pero sí al resultado de los choques; ratios de masa muy grandes provocan comportamientos poco estables.
-5. La **fricción** solo se nota cuando hay contacto entre colliders.
-6. Un **Trigger** no genera colisión física: atraviesa y solo lanza eventos.
-
-> ⚠️ Los resultados descritos son los esperados según el comportamiento del motor de físicas de Unity. Pequeñas variaciones (dirección en la que sale rodando la esfera, distancia a la que sale el cubo…) dependen de la versión de Unity y de los valores exactos de posición.
+![](gifs/situacion9.gif)`
